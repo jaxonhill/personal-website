@@ -1,23 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Navbar from "./Navbar";
+import HeadingSection from "./HeadingSection";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="font-montserrat text-zinc-900 font-medium">
+      <Navbar />
+      <HeadingSection />
     </div>
   );
 }
