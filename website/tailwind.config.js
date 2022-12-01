@@ -20,6 +20,9 @@ module.exports = {
     },
     boxShadow: {
       "neubrutalism": "0 2px 0 0 rgba(24, 24, 27, 1.00)",
+      "neubrutalism-large": "6px 6px 0 0 rgba(24, 24, 27, 1.00)",
+      "neubrutalism-medium": "4px 4px 0 0 rgba(24, 24, 27, 1.00)",
+      "neubrutalism-small": "2px 2px 0 0 rgba(24, 24, 27, 1.00)",
     },
   },
   plugins: [],

@@ -37,7 +37,7 @@ const HeadingSection = () => {
             "icon": (
                 <i>
                     <svg width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M21.25 0C23.3211 0 25 1.67893 25 3.75V16.25C25 18.3211 23.3211 20 21.25 20H3.75C1.67893 20 0 18.3211 0 16.25V3.75C0 1.67893 1.67893 0 3.75 0H21.25ZM22.5 4.16L13.3231 12.1907C12.8911 12.5687 12.2638 12.6002 11.7993 12.2852L11.6769 12.1907L2.5 4.16125V16.25C2.5 16.9404 3.05964 17.5 3.75 17.5H21.25C21.9404 17.5 22.5 16.9404 22.5 16.25V4.16ZM20.6 2.5H4.3975L12.5 9.58904L20.6 2.5Z" fill="#18181B" />
+                        <path fillRule="evenodd" clipRule="evenodd" d="M21.25 0C23.3211 0 25 1.67893 25 3.75V16.25C25 18.3211 23.3211 20 21.25 20H3.75C1.67893 20 0 18.3211 0 16.25V3.75C0 1.67893 1.67893 0 3.75 0H21.25ZM22.5 4.16L13.3231 12.1907C12.8911 12.5687 12.2638 12.6002 11.7993 12.2852L11.6769 12.1907L2.5 4.16125V16.25C2.5 16.9404 3.05964 17.5 3.75 17.5H21.25C21.9404 17.5 22.5 16.9404 22.5 16.25V4.16ZM20.6 2.5H4.3975L12.5 9.58904L20.6 2.5Z" fill="#18181B" />
                     </svg>
                 </i>
             ),
@@ -63,7 +63,7 @@ const HeadingSection = () => {
                 </p>
             </div>
             <div className="flex gap-4 flex-wrap">
-                {aboutButtonArr.map((aboutButton) => <AboutButton aboutButton={aboutButton} />)}
+                {aboutButtonArr.map((aboutButton, index) => <AboutButton key={index} aboutButton={aboutButton} />)}
             </div>
         </div>
     )
