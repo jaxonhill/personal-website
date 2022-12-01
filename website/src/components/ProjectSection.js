@@ -35,7 +35,7 @@ const tags = ["All", "Javascript", "Typescript", "React", "Tailwind", "Python", 
 
 const ProjectSection = () => {
     return (
-        <section className="px-4">
+        <section className="px-4 mb-16">
             <h1 className="font-extrabold text-4xl mb-3">Projects</h1>
             <ProjectTags tags={tags} />
             <div className="grid gap-4 grid-cols-project-cols">

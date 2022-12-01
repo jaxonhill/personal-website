@@ -26,7 +26,7 @@ module.exports = {
     },
     gridTemplateColumns: {
       "skills-cols": "repeat(auto-fit, minmax(10rem, 1fr))",
-      "project-cols": "repeat(auto-fit, minmax(24rem, 1fr))",
+      "project-cols": "repeat(auto-fill, minmax(24rem, 1fr))",
     }
   },
   plugins: [],
