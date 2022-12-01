@@ -24,6 +24,10 @@ module.exports = {
       "neubrutalism-medium": "4px 4px 0 0 rgba(24, 24, 27, 1.00)",
       "neubrutalism-small": "2px 2px 0 0 rgba(24, 24, 27, 1.00)",
     },
+    gridTemplateColumns: {
+      "skills-cols": "repeat(auto-fit, minmax(10rem, 1fr))",
+      "project-cols": "repeat(auto-fit, minmax(24rem, 1fr))",
+    }
   },
   plugins: [],
 }
