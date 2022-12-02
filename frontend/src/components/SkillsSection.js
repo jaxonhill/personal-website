@@ -2,7 +2,6 @@ import React from 'react'
 import SkillsCard from "./SkillsCard"
 
 const SkillsSection = () => {
-    const skills = ["Javascript", "React", "Tailwind CSS", "Python", "Flask", "Git", "Linux", "Figma"]
     const skillsCardInfo = [
         {
             "id": 1,

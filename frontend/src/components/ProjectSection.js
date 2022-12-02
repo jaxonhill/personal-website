@@ -16,7 +16,7 @@ const projects = [
         "frontendTech": ["Javascript", "React", "Tailwind", "Framer Motion"],
         "backendTech": ["Firebase"],
         "otherTech": ["Linux", "Git", "Figma"],
-        "liveSiteLink": "#",
+        "liveSiteLink": "https://jaxonhill.xyz",
         "githubLink": "https://github.com/jaxonhill/personal-website",
     },
 ]
@@ -76,8 +76,6 @@ const ProjectSection = () => {
         setFilteredProjects(newProj);
 
     }, [selectedTags]);
-
-    console.log(selectedTags);
 
     return (
         <section className="mb-16">
