@@ -7,14 +7,14 @@ const projects = [
     {
         "id": 1,
         "name": "jaxonhill.xyz",
-        "info": "jaxonhill.xyz is my personal website built in React, Tailwind, \
-                 and Flask. The site is completely responsive for mobile, tablet, \
-                 and desktop form. I also utilized the Framer Motion framework \
+        "info": "jaxonhill.xyz is my personal website built with React and Tailwind. \
+                 I hosted the site using Firebase Hosting. The site is completely responsive \
+                 for mobile, tablet, and desktop form. I also utilized the Framer Motion framework \
                  to create satisfying animations for the buttons and project filtering. \
                  Try it out by clicking on the filters above!",
         "image": "./images/personal_site.png",
         "frontendTech": ["Javascript", "React", "Tailwind", "Framer Motion"],
-        "backendTech": ["Python", "Flask"],
+        "backendTech": ["Firebase"],
         "otherTech": ["Linux", "Git", "Figma"],
         "liveSiteLink": "#",
         "githubLink": "https://github.com/jaxonhill/personal-website",
@@ -26,6 +26,7 @@ const tags = [
     { "name": "React", "bgColor": "bg-light-blue" },
     { "name": "Tailwind", "bgColor": "bg-cyan" },
     { "name": "Framer Motion", "bgColor": "bg-purple" },
+    { "name": "Firebase", "bgColor": "bg-bright-orange" },
     { "name": "Python", "bgColor": "bg-gold" },
     { "name": "Flask", "bgColor": "bg-green" },
     { "name": "Git", "bgColor": "bg-bright-orange" },
