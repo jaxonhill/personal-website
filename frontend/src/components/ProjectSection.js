@@ -17,7 +17,7 @@ const projects = [
         "backendTech": ["Python", "Flask"],
         "otherTech": ["Linux", "Git", "Figma"],
         "liveSiteLink": "#",
-        "githubLink": "#",
+        "githubLink": "https://github.com/jaxonhill/personal-website",
     },
 ]
 
