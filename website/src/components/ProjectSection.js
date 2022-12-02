@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import ProjectTags from "./ProjectTags"
 import ProjectCard from "./ProjectCard"
+import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 
 const projects = [
     {
@@ -45,6 +46,48 @@ const projects = [
         "liveSiteLink": "#",
         "githubLink": "#",
     },
+    {
+        "id": 4,
+        "name": "jaxonhill.xyz",
+        "info": "jaxonhill.xyz is my personal website built in React, Tailwind, \
+                 and Flask. The site is completely responsive, as well as interactive with \
+                 the ability to filter projects by technology used. You can try it above by \
+                 clicking on a tag!",
+        "image": "bg-gold",
+        "frontendTech": ["Typescript", "React"],
+        "backendTech": ["Python", "Flask"],
+        "otherTech": ["Linux", "Git"],
+        "liveSiteLink": "#",
+        "githubLink": "#",
+    },
+    {
+        "id": 5,
+        "name": "jaxonhill.xyz",
+        "info": "jaxonhill.xyz is my personal website built in React, Tailwind, \
+                 and Flask. The site is completely responsive, as well as interactive with \
+                 the ability to filter projects by technology used. You can try it above by \
+                 clicking on a tag!",
+        "image": "bg-bright-orange",
+        "frontendTech": ["None"],
+        "backendTech": ["Python"],
+        "otherTech": ["Git"],
+        "liveSiteLink": "#",
+        "githubLink": "#",
+    },
+    {
+        "id": 6,
+        "name": "jaxonhill.xyz",
+        "info": "jaxonhill.xyz is my personal website built in React, Tailwind, \
+                 and Flask. The site is completely responsive, as well as interactive with \
+                 the ability to filter projects by technology used. You can try it above by \
+                 clicking on a tag!",
+        "image": "bg-cyan",
+        "frontendTech": ["Tailwind"],
+        "backendTech": ["Python"],
+        "otherTech": ["Figma"],
+        "liveSiteLink": "#",
+        "githubLink": "#",
+    },
 ]
 
 const tags = [
@@ -61,6 +104,7 @@ const tags = [
 
 const ProjectSection = () => {
     const [selectedTags, setSelectedTags] = useState([]);
+    const [filteredProjects, setFilteredProjects] = useState([]);
 
     const handleSelect = (tagName) => {
         // First check if the selected tag is All, because then you remove all others
@@ -78,6 +122,29 @@ const ProjectSection = () => {
         }
     }
 
+    // Filter the projects every time the tags change
+    useEffect(() => {
+        let newProj = projects.filter((project) => {
+            // If the selectedTags are empty, implying "All", then we just return every project
+            if (selectedTags.length === 0) {
+                return true;
+            } else {
+                // Create total technology array for each project to check for tags
+                const projectTech = [].concat(project.frontendTech).concat(project.backendTech).concat(project.otherTech);
+                // We want ALL tags to be included in the projects we filter, create array of t or f val if each tag present
+                const isTagsThereArr = selectedTags.map((tag) => {
+                    return projectTech.includes(tag);
+                })
+                // Return true if all those values where true (All tags we have selected are present)
+                // This includes this project in the filtered copy
+                return isTagsThereArr.every(isTagThere => isTagThere === true);
+            }
+        })
+
+        setFilteredProjects(newProj);
+
+    }, [selectedTags]);
+
     console.log(selectedTags);
 
     return (
@@ -85,27 +152,13 @@ const ProjectSection = () => {
             <h1 className="font-extrabold text-4xl mb-3">Projects</h1>
             <ProjectTags tags={tags} handleSelect={handleSelect} selectedTags={selectedTags} />
             <div className="grid gap-6 grid-cols-project-cols">
-                {projects.filter((project) => {
-                    // If the selectedTags are empty, implying "All", then we just return every project
-                    if (selectedTags.length === 0) {
-                        return true;
-                    } else {
-                        // Create total technology array for each project to check for tags
-                        const projectTech = [].concat(project.frontendTech).concat(project.backendTech).concat(project.otherTech);
-                        // We want ALL tags to be included in the projects we filter, create array of t or f val if each tag present
-                        const isTagsThereArr = selectedTags.map((tag) => {
-                            return projectTech.includes(tag);
-                        })
-                        // Return true if all those values where true (All tags we have selected are present)
-                        // This includes this project in the filtered copy
-                        return isTagsThereArr.every(isTagThere => isTagThere === true);
-                    }
-                    // Map through the filtered array and display the projects that are left after filtering
-                }).map((project) => {
-                    return (
-                        <ProjectCard key={project.id} project={project} />
-                    )
-                })}
+                <AnimatePresence>
+                    {filteredProjects.map((project) => {
+                        return (
+                            <ProjectCard key={project.id} project={project} />
+                        )
+                    })}
+                </AnimatePresence>
             </div>
         </section>
     )

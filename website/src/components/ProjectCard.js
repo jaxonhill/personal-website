@@ -1,8 +1,17 @@
 import React from 'react'
+import { motion, AnimatePresence } from "framer-motion"
 
 const ProjectCard = ({ project }) => {
     return (
-        <div className="flex flex-col border-2 rounded-2xl shadow-neubrutalism-large border-zinc-900 overflow-hidden">
+
+        <motion.div key={project.id}
+            layout
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex flex-col border-2 rounded-2xl shadow-neubrutalism-large border-zinc-900 overflow-hidden"
+        >
             <div className={`w-full ${project.image} h-48`}></div>
             <div className="p-6">
                 <p className="mb-4 font-extrabold text-2xl">{project.name}</p>
@@ -29,7 +38,7 @@ const ProjectCard = ({ project }) => {
                     </a>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 
