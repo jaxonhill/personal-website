@@ -1,9 +1,8 @@
 import React from 'react'
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
 
 const ProjectCard = ({ project }) => {
     return (
-
         <motion.div key={project.id}
             layout
             initial={{ opacity: 0 }}
@@ -12,7 +11,7 @@ const ProjectCard = ({ project }) => {
             transition={{ duration: 0.5 }}
             className="flex flex-col border-2 rounded-2xl shadow-neubrutalism-large border-zinc-900 overflow-hidden"
         >
-            <div className={`w-full ${project.image} h-48`}></div>
+            <img className="block max-w-screen-2xl max-h-[864px] w-auto h-auto border-b-2 border-zinc-900" src={project.image} alt={project.name} />
             <div className="p-6">
                 <p className="mb-4 font-extrabold text-2xl">{project.name}</p>
                 <p className="mb-4">{project.info}</p>
@@ -24,18 +23,28 @@ const ProjectCard = ({ project }) => {
                     <span className="font-bold">Other Technologies:</span> {project.otherTech.join(", ")}
                 </p>
                 <div className="flex gap-6">
-                    <a className="flex gap-2 items-center" href={project.liveSiteLink}>
+                    <motion.a
+                        whileHover={{ scale: 1.10 }}
+                        whileTap={{ scale: 0.85 }}
+                        className="flex gap-2 items-center"
+                        href={project.liveSiteLink}
+                    >
                         <span className="font-bold">Live Website</span>
                         <i>
                             <img src="./svgs/arrow_svg.svg" alt="Arrow Link" />
                         </i>
-                    </a>
-                    <a className="flex gap-2 items-center" href={project.githubLink}>
+                    </motion.a>
+                    <motion.a
+                        whileHover={{ scale: 1.10 }}
+                        whileTap={{ scale: 0.85 }}
+                        className="flex gap-2 items-center"
+                        href={project.githubLink}
+                    >
                         <span className="font-bold">Github</span>
                         <i>
                             <img src="./svgs/arrow_svg.svg" alt="Arrow Link" />
                         </i>
-                    </a>
+                    </motion.a>
                 </div>
             </div>
         </motion.div>

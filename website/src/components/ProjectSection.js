@@ -1,90 +1,21 @@
 import React, { useState, useEffect } from 'react'
 import ProjectTags from "./ProjectTags"
 import ProjectCard from "./ProjectCard"
-import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const projects = [
     {
         "id": 1,
         "name": "jaxonhill.xyz",
         "info": "jaxonhill.xyz is my personal website built in React, Tailwind, \
-                 and Flask. The site is completely responsive, as well as interactive with \
-                 the ability to filter projects by technology used. You can try it above by \
-                 clicking on a tag!",
-        "image": "bg-cyan",
-        "frontendTech": ["Javascript", "React", "Tailwind"],
+                 and Flask. The site is completely responsive for mobile, tablet, \
+                 and desktop form. I also utilized the Framer Motion framework \
+                 to create satisfying animations for the buttons and project filtering. \
+                 Try it out by clicking on the filters above!",
+        "image": "./images/personal_site.png",
+        "frontendTech": ["Javascript", "React", "Tailwind", "Framer Motion"],
         "backendTech": ["Python", "Flask"],
         "otherTech": ["Linux", "Git", "Figma"],
-        "liveSiteLink": "#",
-        "githubLink": "#",
-    },
-    {
-        "id": 2,
-        "name": "jaxonhill.xyz",
-        "info": "jaxonhill.xyz is my personal website built in React, Tailwind, \
-                 and Flask. The site is completely responsive, as well as interactive with \
-                 the ability to filter projects by technology used. You can try it above by \
-                 clicking on a tag!",
-        "image": "bg-dark-blue",
-        "frontendTech": ["Typescript", "React", "Tailwind"],
-        "backendTech": ["Python", "Flask"],
-        "otherTech": ["Linux", "Git", "Figma"],
-        "liveSiteLink": "#",
-        "githubLink": "#",
-    },
-    {
-        "id": 3,
-        "name": "jaxonhill.xyz",
-        "info": "jaxonhill.xyz is my personal website built in React, Tailwind, \
-                 and Flask. The site is completely responsive, as well as interactive with \
-                 the ability to filter projects by technology used. You can try it above by \
-                 clicking on a tag!",
-        "image": "bg-bright-pink",
-        "frontendTech": ["Typescript", "React", "Tailwind"],
-        "backendTech": ["Python", "Flask"],
-        "otherTech": ["Linux", "Git", "Figma"],
-        "liveSiteLink": "#",
-        "githubLink": "#",
-    },
-    {
-        "id": 4,
-        "name": "jaxonhill.xyz",
-        "info": "jaxonhill.xyz is my personal website built in React, Tailwind, \
-                 and Flask. The site is completely responsive, as well as interactive with \
-                 the ability to filter projects by technology used. You can try it above by \
-                 clicking on a tag!",
-        "image": "bg-gold",
-        "frontendTech": ["Typescript", "React"],
-        "backendTech": ["Python", "Flask"],
-        "otherTech": ["Linux", "Git"],
-        "liveSiteLink": "#",
-        "githubLink": "#",
-    },
-    {
-        "id": 5,
-        "name": "jaxonhill.xyz",
-        "info": "jaxonhill.xyz is my personal website built in React, Tailwind, \
-                 and Flask. The site is completely responsive, as well as interactive with \
-                 the ability to filter projects by technology used. You can try it above by \
-                 clicking on a tag!",
-        "image": "bg-bright-orange",
-        "frontendTech": ["None"],
-        "backendTech": ["Python"],
-        "otherTech": ["Git"],
-        "liveSiteLink": "#",
-        "githubLink": "#",
-    },
-    {
-        "id": 6,
-        "name": "jaxonhill.xyz",
-        "info": "jaxonhill.xyz is my personal website built in React, Tailwind, \
-                 and Flask. The site is completely responsive, as well as interactive with \
-                 the ability to filter projects by technology used. You can try it above by \
-                 clicking on a tag!",
-        "image": "bg-cyan",
-        "frontendTech": ["Tailwind"],
-        "backendTech": ["Python"],
-        "otherTech": ["Figma"],
         "liveSiteLink": "#",
         "githubLink": "#",
     },
@@ -92,9 +23,9 @@ const projects = [
 
 const tags = [
     { "name": "Javascript", "bgColor": "bg-gold" },
-    { "name": "Typescript", "bgColor": "bg-dark-blue" },
     { "name": "React", "bgColor": "bg-light-blue" },
     { "name": "Tailwind", "bgColor": "bg-cyan" },
+    { "name": "Framer Motion", "bgColor": "bg-purple" },
     { "name": "Python", "bgColor": "bg-gold" },
     { "name": "Flask", "bgColor": "bg-green" },
     { "name": "Git", "bgColor": "bg-bright-orange" },

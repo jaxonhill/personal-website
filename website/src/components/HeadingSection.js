@@ -28,7 +28,7 @@ const HeadingSection = () => {
     ];
 
     return (
-        <div className="flex flex-col mb-24 xl:flex-row xl:justify-between xl:items-center xl:gap-2">
+        <div className="flex flex-col mb-24">
             <div>
                 <h1 className="text-6xl mb-6 max-w-sm md:max-w-none">Hey I'm <span className="font-extrabold">Jaxon Hill</span></h1>
                 <div className="mb-8 leading-relaxed md:max-w-4xl">
@@ -46,7 +46,7 @@ const HeadingSection = () => {
                     </p>
                 </div>
             </div>
-            <div className="flex gap-4 xl:flex-col xl:items-center xl:pr-12">
+            <div className="flex gap-4">
                 {aboutButtonArr.map((aboutButton, index) => <AboutButton key={index} aboutButton={aboutButton} />)}
             </div>
         </div>
