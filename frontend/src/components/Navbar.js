@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
+import { motion } from "framer-motion"
 
 const Navbar = () => {
     return (
@@ -7,20 +8,28 @@ const Navbar = () => {
                 <span className="font-extrabold">JAXONHILL</span>
                 .xyz
             </p>
-
-            <div className="self-stretch flex">
-                <ul className="flex list-none">
-                    <li>
-                        <a id="skills" href="">
-                            <button className="h-full px-4 lg:px-8 border-l-2 border-zinc-900">Skills</button>
-                        </a>
-                    </li>
-                    <li>
-                        <a id="projects" href="">
-                            <button className="h-full px-4 text-white lg:px-8 bg-zinc-900 ">Projects</button>
-                        </a>
-                    </li>
-                </ul>
+            <div className="flex gap-6 items-center">
+                <motion.a
+                    whileHover={{ scale: 1.20 }}
+                    whileTap={{ scale: 0.85 }}
+                    href="https://github.com/jaxonhill"
+                >
+                    <img src="./svgs/github_logo.svg" alt="Github" />
+                </motion.a>
+                <motion.a
+                    whileHover={{ scale: 1.20 }}
+                    whileTap={{ scale: 0.85 }}
+                    href="https://www.linkedin.com/in/jaxon-c-hill/"
+                >
+                    <img src="./svgs/linkedin_logo.svg" alt="LinkedIn" />
+                </motion.a>
+                <motion.a
+                    whileHover={{ scale: 1.20 }}
+                    whileTap={{ scale: 0.85 }}
+                    href="mailto:jaxoncharleshill@gmail.com"
+                >
+                    <img src="./svgs/email_logo.svg" alt="Email" />
+                </motion.a>
             </div>
         </nav>
     )
