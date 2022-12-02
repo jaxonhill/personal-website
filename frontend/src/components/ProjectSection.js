@@ -83,7 +83,7 @@ const ProjectSection = () => {
         <section className="mb-16">
             <h1 className="font-extrabold text-4xl mb-3">Projects</h1>
             <ProjectTags tags={tags} handleSelect={handleSelect} selectedTags={selectedTags} />
-            <div className="grid gap-6 grid-cols-project-cols">
+            <div className="grid gap-6 grid-cols-project-cols-small md:grid-cols-project-cols">
                 <AnimatePresence>
                     {filteredProjects.map((project) => {
                         return (

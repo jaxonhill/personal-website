@@ -11,7 +11,7 @@ const ProjectCard = ({ project }) => {
             transition={{ duration: 0.5 }}
             className="flex flex-col border-2 rounded-2xl shadow-neubrutalism-large border-zinc-900 overflow-hidden"
         >
-            <img className="block max-w-screen-2xl max-h-[864px] w-auto h-auto border-b-2 border-zinc-900" src={project.image} alt={project.name} />
+            <img className="block max-w-full max-h-full w-auto h-auto border-b-2 border-zinc-900" src={project.image} alt={project.name} />
             <div className="p-6">
                 <p className="mb-4 font-extrabold text-2xl">{project.name}</p>
                 <p className="mb-4">{project.info}</p>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { motion } from "framer-motion"
 
 const AboutButton = ({ aboutButton }) => {
-    const [windowWidth, setWindowWidth] = useState(0);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     useEffect(() => {
         const handleResize = () => {
