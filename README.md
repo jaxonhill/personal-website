@@ -1,5 +1,5 @@
 <div style="display: flex; flex-direction: column; align-items: center; gap: 0.75rem" >
-    <img src="./frontend/build/images/personal_site.png"></img>
+    <img src="https://jaxonhill.xyz/images/personal_site.png" alt="Project Image"></img>
     <div style="display: flex; flex-direction: column; align-items: center;">
     <h2 style="font-weight: bold">jaxonhill.xyz</h2>
     <p style="text-align: center">An interactive, responsive portfolio website designed in Figma and built with Javascript, React, Tailwind, and Framer Motion. The website is hosted with Firebase Hosting.</p>
