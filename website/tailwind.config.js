@@ -16,6 +16,7 @@ module.exports = {
         "gold": "#FDBE11",
         "bright-pink": "#FF90E8",
         "light-blue": "#0FB2F9",
+        "green": "#A9FF99",
       },
     },
     boxShadow: {

@@ -1,8 +1,8 @@
 import React from 'react'
 
-const ProjectTagButton = ({ text }) => {
+const ProjectTagButton = ({ tag, handleSelect, selectedTags, baseStyles }) => {
     return (
-        <button className="font-extrabold px-6 py-1 border-2 border-zinc-900 rounded-xl shadow-neubrutalism-medium">{text}</button>
+        <button onClick={() => handleSelect(tag.name)} className={selectedTags.includes(tag.name) ? baseStyles + tag.bgColor : baseStyles}>{tag.name}</button>
     )
 }
 
