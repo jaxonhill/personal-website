@@ -47,11 +47,10 @@ const SkillsSection = () => {
     ]
 
     return (
-        <section className="px-4 mb-16">
+        <section className="mb-24">
             <h1 className="font-extrabold text-4xl mb-3 pb-4 border-b-2 border-zinc-900">Skills</h1>
             <div className="grid grid-cols-skills-cols gap-4 grid-flow-row">
                 {skillsCardInfo.map((skill) => <SkillsCard key={skill.id} skill={skill} />)}
-                {/* {skills.map((skill, index) => <SkillsCard key={index} skill={skill} />)} */}
             </div>
         </section >
     )

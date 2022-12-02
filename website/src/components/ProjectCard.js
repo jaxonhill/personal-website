@@ -2,7 +2,8 @@ import React from 'react'
 
 const ProjectCard = ({ project }) => {
     return (
-        <div className="flex flex-col border-2 rounded-2xl shadow-neubrutalism-large border-zinc-900">
+        <div className="flex flex-col border-2 rounded-2xl shadow-neubrutalism-large border-zinc-900 overflow-hidden">
+            <div className={`w-full ${project.image} h-48`}></div>
             <div className="p-6">
                 <p className="mb-4 font-extrabold text-2xl">{project.name}</p>
                 <p className="mb-4">{project.info}</p>

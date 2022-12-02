@@ -7,11 +7,13 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="font-montserrat text-zinc-900 font-medium">
+    <div className="font-montserrat text-zinc-900 font-medium box-border">
       <Navbar />
-      <HeadingSection />
-      <SkillsSection />
-      <ProjectSection />
+      <div className="px-4 md:px-16 lg:px-32 2xl:px-48">
+        <HeadingSection />
+        <SkillsSection />
+        <ProjectSection />
+      </div>
       <Footer />
     </div>
   );
