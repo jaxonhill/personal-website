@@ -19,11 +19,42 @@ const projects = [
         "liveSiteLink": "https://jaxonhill.xyz",
         "githubLink": "https://github.com/jaxonhill/personal-website",
     },
+    {
+        "id": 2,
+        "name": "Reddit Upvote Guessing Game",
+        "info": "upvoteguesser.com is a fun game I made where two Reddit posts randomly pop \
+                 up on the screen and you have to guess which one has more upvotes. I built a \
+                 Static Generation site through Next.js to save 100%+ on hosting fees. I utilized the \
+                 Reddit API and built a function to fetch data from 100+ subreddits on a user click.\
+                 Also, I created a modern, responsive, user interface on all screen sizes with media \
+                 breakpoints and Tailwind CSS.",
+        "image": "./images/upvote_guesser_picture.png",
+        "frontendTech": ["Javascript", "React", "Next.js", "Tailwind", "Framer Motion"],
+        "backendTech": ["NextJS"],
+        "otherTech": ["Linux", "Git", "Figma"],
+        "liveSiteLink": "https://upvoteguesser.com/",
+        "githubLink": "https://github.com/jaxonhill/upvote-guesser",
+    },
+    {
+        "id": 3,
+        "name": "eCommerce Website",
+        "info": "I built a minimalist eCommerce store to help solidify the fundamentals of Next.js and how \
+                 it builds on React. I utilized Static Generation and Next.js fetch options to generate iterative \
+                 pages for over 20+ products. I also developed search and filter options with functional components \
+                 to find any product in under 1 second.",
+        "image": "./images/ecomm_store_picture.png",
+        "frontendTech": ["Javascript", "React", "Next.js", "Tailwind", "Framer Motion"],
+        "backendTech": ["NextJS"],
+        "otherTech": ["Linux", "Git", "Figma"],
+        "liveSiteLink": "https://minimalist-ecommerce-store.vercel.app/",
+        "githubLink": "https://github.com/jaxonhill/minimalist-ecommerce-store",
+    },
 ]
 
 const tags = [
     { "name": "Javascript", "bgColor": "bg-gold" },
     { "name": "React", "bgColor": "bg-light-blue" },
+    { "name": "Next.js", "bgColor": "bg-gold" },
     { "name": "Tailwind", "bgColor": "bg-cyan" },
     { "name": "Framer Motion", "bgColor": "bg-purple" },
     { "name": "Firebase", "bgColor": "bg-bright-orange" },
