@@ -30,7 +30,7 @@ const projects = [
                  breakpoints and Tailwind CSS.",
         "image": "./images/upvote_guesser_picture.png",
         "frontendTech": ["Javascript", "React", "Next.js", "Tailwind", "Framer Motion"],
-        "backendTech": ["NextJS"],
+        "backendTech": ["Next.js"],
         "otherTech": ["Linux", "Git", "Figma"],
         "liveSiteLink": "https://upvoteguesser.com/",
         "githubLink": "https://github.com/jaxonhill/upvote-guesser",
@@ -44,7 +44,7 @@ const projects = [
                  to find any product in under 1 second.",
         "image": "./images/ecomm_store_picture.png",
         "frontendTech": ["Javascript", "React", "Next.js", "Tailwind", "Framer Motion"],
-        "backendTech": ["NextJS"],
+        "backendTech": ["Next.js"],
         "otherTech": ["Linux", "Git", "Figma"],
         "liveSiteLink": "https://minimalist-ecommerce-store.vercel.app/",
         "githubLink": "https://github.com/jaxonhill/minimalist-ecommerce-store",
@@ -58,8 +58,8 @@ const tags = [
     { "name": "Tailwind", "bgColor": "bg-cyan" },
     { "name": "Framer Motion", "bgColor": "bg-purple" },
     { "name": "Firebase", "bgColor": "bg-bright-orange" },
-    { "name": "Python", "bgColor": "bg-gold" },
-    { "name": "Flask", "bgColor": "bg-green" },
+    // { "name": "Python", "bgColor": "bg-gold" },
+    // { "name": "Flask", "bgColor": "bg-green" },
     { "name": "Git", "bgColor": "bg-bright-orange" },
     { "name": "Linux", "bgColor": "bg-gold" },
     { "name": "Figma", "bgColor": "bg-green" },
@@ -103,6 +103,9 @@ const ProjectSection = () => {
                 return isTagsThereArr.every(isTagThere => isTagThere === true);
             }
         })
+
+        // Reverse them so older projects in the back
+        newProj.reverse();
 
         setFilteredProjects(newProj);
 
